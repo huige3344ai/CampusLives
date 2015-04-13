@@ -18,6 +18,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <body>
   <div id="container" >
          <div id="header">
+         
          </div> 
  
          <div id="body">
@@ -57,10 +58,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                        				<a href="#">处理活动报名</a>
                        				
                        		</li>
-                       		<li>
-                       				<a href="#">修改密码</a>
-                       				 
-                       		</li>
+
                        		
                        		
                        </ul>
