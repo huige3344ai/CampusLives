@@ -5,20 +5,27 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 
 %>
 
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
 <html>
   <head>
-    <base href="<%=basePath%>">
+    <base href="<%=basePath%>"/>
     
     <title>校园服务网站</title>
-	
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	
+
+  <link rel="stylesheet" href="css/main.css" type="text/css"></link>
   </head>
   <body>
   <div id="container" >
          <div id="header">
-         
+         	
+         	<div class="header_band" >
+         	<span>北京理工大学珠海学院</span>
+         	</div>
+         	
+         	<div class="header_title" >
+         	<strong><span>校园生活服务网站</span></strong>
+         	</div>         	
          </div> 
  
          <div id="body">
@@ -29,59 +36,53 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                        				
                        		</li>
                        		<li>
-                       				<a href="#">爱心活动主页</a>
+                       				<a href="#">校园美景</a>
                        				
                        		</li>
                        		<li>
-                       				<a href="#">爱心活动报名</a>
+                       				<a href="#">校园美食</a>
                        				
                        		</li>
                        		<li>
-                       				<a href="#">活动管理</a>
-                       				<ul>
-                       				    <li>
-                       				        <a  href="view/jsp/ActivityApply.jsp">添加活动</a>
-                       				       
-                       				    </li>
-                       				      <li>
-                       				        <a  href="#">删除活动</a>
-                       				       
-                       				    </li>
-                       				     <li>
-                       				        <a  href="#">修改活动</a>
-                       				       
-                       				    </li>
-                       				</ul>
+                       				<a href="#">失物招领</a>
+                       				
                        				
                        		</li>
                        		<li>
-                       				<a href="#">处理活动报名</a>
+                       				<a href="#">爱心活动</a>
                        				
+                       		</li>
+                       		
+                        	<li>
+                       				<a href="#">投诉建议</a>
+                       				 
+                       		</li> 
+                       		                           		
+                       		<li>
+                       				
+                       				<a href="page/foreground/regist.jsp" >修改密码</a>
+                       				 
                        		</li>
 
                        		
-                       		
                        </ul>
-              
+                <div class = "user">
+                        
+                 <%=session.getAttribute("uname")%>,<a href="page/foreground/logout.jsp">注销</a>
+                	                		
+                 </div>   
                 </div>
-               
-              
-                
-    	        <div class="c_div1">
-    	         <label >用户信息:</label>
-    	          <input type="text" value="aaaa" disabled="disabled"/>
-    	         
-    	                           
-    	        </div>
-    	        <div class="c_div2">
-    	                    
-    	        </div>
-    	      
+     				
          </div>
          
             
          
          <div id="footer">
+         	<div class="footer_title">
+         	<p>Copyright 2014 ZFSOFT All Rights Reserved. 标准版V1.0.0E-mail：888888@gmail.com</p>
+         	<br/>
+			<p>地址：广东省珠海市唐家湾金凤路6号 北京理工大学珠海学院 联系电话：13800138000</p>
+         	</div>
          </div>
   </div>
   </body>

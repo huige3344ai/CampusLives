@@ -1,0 +1,5 @@
+eclipse.preferences.version=1
+encoding//WebRoot/page/foreground/login.jsp=UTF-8
+encoding//WebRoot/page/foreground/logout.jsp=UTF-8
+encoding//WebRoot/page/foreground/regist.jsp=UTF-8
+encoding//src/com/dbo/ConnectionManager.java=UTF-8
