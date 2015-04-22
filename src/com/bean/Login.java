@@ -11,9 +11,11 @@ public class Login {
 	public String  checkLogin(String uid,String password){
 		UserDaoImpl td = new UserDaoImpl();
 		String result="";
+	
 		User user = new User();
 		try {
 			 user = td.findById(String.valueOf(uid));
+			
 				if(user!=null&&user.getPassword().equals(password)){					
 					result= "success";
 					
@@ -64,5 +66,21 @@ public String getUname(String uid){
 
 		return result;
 	}	
+	
+	
+	public int getIsAm(String  uid){
+		UserDaoImpl td = new UserDaoImpl();
+		int isad=0;
+
+		try {
+			User user = td.findById(String.valueOf(uid));
+			isad = user.getIsadmin();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return isad;
+		
+	}
 	
 }

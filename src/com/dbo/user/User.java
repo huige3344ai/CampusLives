@@ -12,6 +12,10 @@ public class User {
 	private String uname;
 	private String password;
 	private int isadmin;
+	public int getIsadmin() {
+		return isadmin;
+	}
+
 	public int isIsadmin() {
 		return isadmin;
 	}

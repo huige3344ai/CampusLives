@@ -12,9 +12,10 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <title>修改密码</title>
 
   <link rel="stylesheet" href="css/login.css" type="text/css"></link>
+  
   <script type="text/javascript" src="js/main_regist.js"></script>
   
-  </head>
+  <link rel="stylesheet" href="../../css/text.css" type="text/css"></link></head>
   
   <body>
     <div class="dataEye">
@@ -33,7 +34,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				response.sendRedirect("/CampusLives/page/foreground/logout.jsp");
 				}
 				%>
-				<label class="field" id="text_user"  ></label>
+				<label class="field" id="text_user"></label>
 				<input type="text" class="input-text-user input-click" name="email" id="email" value="<%=session.getAttribute("email")%>">
 			</div>
 			<div class="row">
@@ -48,16 +49,23 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 				<input class="login-btn"  type="submit" value="确认修改"  onClick="return validateLogin()"></input>
 			</div>
 			<div class="row btnArea">
-				<input class="login-btn_cancel"  type="submit" value="取消修改"  onClick="javascript:window.history.back();"></input>
+				<input class="login-btn_cancel"  type="button" value="取消修改"  onClick="javascript:window.history.back();"></input>
 			</div>			
 			<div class="tissue">
 				<%	
 				String result = (String)request.getAttribute("message");
 				if(result=="false"){
 				result="旧密码不正确！！！";
+				
+				}else if(result=="not_different"){
+				
+				result="新旧密码一致!!!";
+				
 				}else{
-				result="注意:新旧密码不能一致";
+						result="注意:新旧密码不能一致";
+				
 				}
+				
 				%>
 				<%=result%>
 			</div>

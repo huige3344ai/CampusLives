@@ -2,7 +2,7 @@
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
-
+	
 %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -14,6 +14,9 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     <title>校园服务网站</title>
 
   <link rel="stylesheet" href="css/main.css" type="text/css"></link>
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script type="text/javascript" src="js/imageflow_main.js"></script>
+  
   </head>
   <body>
   <div id="container" >
@@ -32,29 +35,29 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     	         <div id="nav">
                        <ul>
                        		<li>
-                       				<a href="#">主页 </a>
+                       				<a href="page/foreground/main.jsp">主页 </a>
                        				
                        		</li>
                        		<li>
-                       				<a href="#">校园美景</a>
+                       				<a href="page/PointView/foreground/PointNavigation.jsp">校园美景</a>
                        				
                        		</li>
                        		<li>
-                       				<a href="#">校园美食</a>
+                       				<a href="page/foreground/food/FoodNetwork.jsp">校园美食</a>
                        				
                        		</li>
                        		<li>
-                       				<a href="#">失物招领</a>
+                       				<a href="checkservlet">失物招领</a>
                        				
                        				
                        		</li>
                        		<li>
-                       				<a href="#">爱心活动</a>
+                       				<a href="LoginServlet">爱心活动</a>
                        				
                        		</li>
                        		
                         	<li>
-                       				<a href="#">投诉建议</a>
+                       				<a href="JudgeIsAdmin">投诉建议</a>
                        				 
                        		</li> 
                        		                           		
@@ -72,9 +75,21 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
                 	                		
                  </div>   
                 </div>
-     				
-         </div>
-         
+                
+        		<div style=" width:970px;height:700px;margin-top:20px;margin-left:auto;margin-right:auto;">
+        		
+       	<div id="starsIF" class="imageflow">
+	<img longdesc="page/foreground/main.jsp" src="images/index_image/index_bg.jpg" width="280" height="300"></img>
+	<img longdesc="page/PointView/foreground/PointNavigation.jsp" src="images/index_image/school_image.jpg" width="280" height="300"></img>			
+	<img longdesc="page/foreground/food/FoodNetwork.jsp" src="images/index_image/restaurant_image.JPG" width="280" height="300"></img>	
+	<img longdesc="checkservlet" src="images/index_image/lost_image.jpg" width="280" height="300"></img>
+	<img longdesc="page/PointView/foreground/love_activity.jsp" src="images/index_image/activity_image.jpg" width="280" height="300"></img>
+	</div>        		
+        </div>
+		<div id ="body_footer">
+			<ul><li><h5>待开发框架</h5></li></ul>
+		</div>
+</div>         
             
          
          <div id="footer">
@@ -83,6 +98,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
          	<br/>
 			<p>地址：广东省珠海市唐家湾金凤路6号 北京理工大学珠海学院 联系电话：13800138000</p>
          	</div>
+         	
+         	
          </div>
   </div>
   </body>

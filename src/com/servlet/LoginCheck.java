@@ -68,11 +68,14 @@ public class LoginCheck extends HttpServlet {
 		String password = request.getParameter("password");		
 		Login login = new Login();
 		String jud = login.checkLogin(user_name,password);
+		//System.out.print(jud);
 		if(jud.equals("success")){
 			session.setAttribute("email", user_name);
 			session.setAttribute("password", password);
 			session.setAttribute("uname", login.getUname(user_name));
+			session.setAttribute("isAdmin", login.getIsAm(user_name));
 			response.sendRedirect("/CampusLives/page/foreground/main.jsp");
+			
 		}else{
 			request.setAttribute("message","false");
 			request.getRequestDispatcher("/page/foreground/login.jsp").forward(request, response);

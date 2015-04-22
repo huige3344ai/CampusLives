@@ -21,15 +21,71 @@ a:hover { text-decoration:underline; }
 .header_title span,strong{color:white;}
 
 
-#nav{width:900px;height:40px;float:left;top:-42px;margin-left:220px;line-height:40px;     text-align:center;font:18px ;position:absolute;}
+#nav{ width:900px;height:40px;float:left;top:-42px;margin-left:220px;line-height:40px;text-align:center;font:18px ;position:absolute;}
 #nav ul{width:900px;overflow:hidden;float:left;}
 #nav ul li{width:100px;height:40px;float:left;position:relative;line-height:40px;  text-align:center;}	
-#nav ul li a{/*  Ò»¼¶µ¼º½ */width:80px;height:20px;color:black;}		
+#nav ul li a{color:black;}		
 #nav ul li a:hover{background:white;}	
 	
 .user{width:100px;height:40px;float:right;margin-top:-40px;}
-#body{width:100%;height:750px;position:absolute;left:0px;top:100px;}
+#body{width:100%;position:absolute;top:100px;}
+
+.suggest_nav{width:120px;position:relative; margin:0 auto;overflow:hidden;}
+.suggest_nav{height:44px;background:url("../images/suggest/suggest_banner.png") repeat-x 0 -45px;margin-top:10px;margin-left:225px;}
+.suggest_nav_l{height:44px;background:url("../images/suggest/suggest_banner.png")no-repeat;}
+.suggest_nav_r{height:44px;background:url("../images/suggest/suggest_banner.png")no-repeat  right -90px;position:relative;}
+.suggest_nav h3{line-height:44px;text-align:center;font:18px;color:#F8F8F8;margin-left:12px;}
+
+#suggest{height:440px;width:800px; margin-left:225px;overflow:hidden;margin-top:10px;position:relative;border: 2px solid #38b8da; background:#ffffff;}
+
+.your_name{height:120px;width:580;}
+.name_label,.suggest_label{height:40px;width:580;margin-left:20px; line-height:40px;position:relative;}
+.your_name_input{height:40px;width:200px;background:transparent;border:2px solid #e3e3e1;margin-left:20px;margin-top:10px;}
+
+.your_suggest{width:480px;height:200px;}
+.suggest_label{width:480px;height:40px;margin-top:-80px;}
+.suggest_input{width:480px;height:120px;margin-left:20px;}
+
+.sumbit_button{display:block;background:url("../images/login/bg.png") repeat-x;width:290px;text-align:center;height:35px;line-height:35px;color:white;font-size:16px;border-radius:3px;border:1px solid #215A8D;position:relative;margin:20px auto;}
+
+#suggest .tissue{width:240px;color:red; margin:10px auto ; }
+
+
+.suggestion{height:400px;width:700px;margin-top:20px;}
+.suggestion_talbe td{border:1px solid #38b8da;}
+.suggestion_talbe {margin-left:20px;border:1px solid #38b8da;}
+
+
+.imageflow{overflow:hidden; position:relative; text-align:left; visibility:hidden; width:100%}
+.imageflow img{-wekbit-box-reflect: above; box-reflect: above;border:none; position:absolute; top:0px; visibility:hidden; -ms-interpolation-mode:bicubic}
+.imageflow p{margin:0 auto; text-align:center}
+.imageflow .loading{border:1px solid #ccc; height:15px; left:50%; margin-left:-106px; padding:5px; position:relative; visibility:visible; width:200px}
+.imageflow .loading_bar{background:#ccc; height:15px; visibility:visible; width:1%}
+.imageflow .caption{font-weight:bold; position:relative; text-align:center; z-index:10000}
+.imageflow .scrollbar{border-bottom:1px solid #b3b3b3; position:relative; visibility:hidden; z-index:10001; height:1px}
+.imageflow .slider{height:14px; margin:-6px 0 0 -7px; position:absolute; width:14px; z-index:10002}
+.imageflow .images{overflow:hidden; white-space:nowrap}
+
+#body_footer {height:50px;margin-top:-250px;}
+#body_footer h5{line-height:40px;text-align:center;}
+#body_footer ul{border-bottom:2px solid #777}
+#body_footer li{border-bottom:2px solid #ccc}
 
 #footer{width:100%;height:50px;position:absolute;bottom:0px;}
 .footer_title{width:490px;height:50px;margin: 0 auto;}
 .footer_title p{line-height:20px;font-size:12px;color:#656565;}
+
+
+
+
+#CustomBody{width:auto;height:800px; margin-left: auto;margin-right:auto;overflow:hidden;}
+.CustomBody_type{width:226px;height:44px;display:inline;}
+#TextBody{width:100%;height:auto;position:absolute;}
+
+#SideBody{float:left;width:200px;height:500px;}
+.SideBody_up{width:auto;height:200px;}
+.SideBody_down{width:auto;height:300px;}
+
+#MainBody{float:right;width:695px;height:500px;}
+
+

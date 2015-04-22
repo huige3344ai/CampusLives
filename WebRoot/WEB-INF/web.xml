@@ -20,7 +20,18 @@
     <servlet-class>com.servlet.ExchagePasswrodSerlvet</servlet-class>
   </servlet>
 
-
+<servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>PointAddServlet</servlet-name>
+    <servlet-class>com.servlet.PointAddServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>PointDeleteServlet</servlet-name>
+    <servlet-class>com.servlet.PointDeleteServlet</servlet-class>
+  </servlet>
 
 
 
@@ -36,8 +47,162 @@
     <servlet-name>ExchagePasswrodSerlvet</servlet-name>
     <url-pattern>/servlet/ExchagePasswrodSerlvet</url-pattern>
   </servlet-mapping>
+<servlet-mapping>
+    <servlet-name>PointAddServlet</servlet-name>
+    <url-pattern>/PointAddServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>PointDeleteServlet</servlet-name>
+    <url-pattern>/PointDeleteServlet</url-pattern>
+  </servlet-mapping>
+  
 
+    
+    <filter>
+        <filter-name>login</filter-name>
+        <filter-class>com.servlet.UserIsLogin</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>login</filter-name>
+        <url-pattern>/page/*</url-pattern>
+    </filter-mapping>
+     
+     
+     <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>lostservlet</servlet-name>
+    <servlet-class>com.servlet.lostservlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>findservlet</servlet-name>
+    <servlet-class>com.servlet.findservlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>deletedataserlet</servlet-name>
+    <servlet-class>com.servlet.deletedataserlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>revisedataserlet</servlet-name>
+    <servlet-class>com.servlet.revisedataserlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>checkservlet</servlet-name>
+    <servlet-class>com.servlet.checkservlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>reviselostservlet</servlet-name>
+    <servlet-class>com.servlet.reviselostservlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>revisefindservlet</servlet-name>
+    <servlet-class>com.servlet.revisefindservlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>SuggestServlet</servlet-name>
+    <servlet-class>com.servlet.SuggestServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>JudgeIsAdmin</servlet-name>
+    <servlet-class>com.servlet.JudgeIsAdmin</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>HandelSuggestion</servlet-name>
+    <servlet-class>com.servlet.HandelSuggestion</servlet-class>
+  </servlet>
+
+
+
+  <servlet-mapping>
+    <servlet-name>lostservlet</servlet-name>
+    <url-pattern>/lostservlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>findservlet</servlet-name>
+    <url-pattern>/findservlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>deletedataserlet</servlet-name>
+    <url-pattern>/deletedataserlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>revisedataserlet</servlet-name>
+    <url-pattern>/revisedataserlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>checkservlet</servlet-name>
+    <url-pattern>/checkservlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>reviselostservlet</servlet-name>
+    <url-pattern>/reviselostservlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>revisefindservlet</servlet-name>
+    <url-pattern>/revisefindservlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SuggestServlet</servlet-name>
+    <url-pattern>/servlet/SuggestServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>JudgeIsAdmin</servlet-name>
+    <url-pattern>/JudgeIsAdmin</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>HandelSuggestion</servlet-name>
+    <url-pattern>/servlet/HandelSuggestion</url-pattern>
+  </servlet-mapping>
+
+   <!--  xml -->
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ActivityServlet</servlet-name>
+    <servlet-class>com.servlet.ActivityServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>LoginServlet</servlet-name>
+    <servlet-class>com.servlet.LoginServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>ActivityServlet2</servlet-name>
+    <servlet-class>com.servlet.ActivityServlet2</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>ActivityServlet</servlet-name>
+    <url-pattern>/ActivityServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>LoginServlet</servlet-name>
+    <url-pattern>/LoginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>ActivityServlet2</servlet-name>
+    <url-pattern>/ActivityServlet2</url-pattern>
+  </servlet-mapping>
+  
+ <!--  xml -->  
     <welcome-file-list>
-        <welcome-file>page/foreground/login.jsp</welcome-file>
+        <welcome-file>/login.jsp</welcome-file>
     </welcome-file-list>
+
+    
 </web-app>

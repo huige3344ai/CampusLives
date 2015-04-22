@@ -2,7 +2,6 @@
 <%
 String path = request.getContextPath();
 String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
-
 %>
 
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
@@ -40,13 +39,15 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 			</form>
 			<div class="tissue">
 				<%	
-				String result = (String)request.getAttribute("message");
+				String result = (String)request.getAttribute("message");				
 				if(result=="false"){
 				result="密码或者用户名不正确";
 				}else if(result=="success_ex"){
 				result="修改密码成功，请重新登录";				
-				}
-				else{
+				}else if(result=="logout")
+				{
+				result="您已经退出登录，请重新登录！！！";
+				}else{
 				result="输入用户名或者密码";
 				}
 				%>

@@ -24,6 +24,7 @@ public class JdbcTemplete {
 			if(args!=null){
 				for (int i = 0; i < args.length; i++) {
 					ps.setObject(i+1, args[i]);
+					
 				}
 			}
 			return ps.executeUpdate();
@@ -34,6 +35,9 @@ public class JdbcTemplete {
 			ConnectionManager.close(null, ps, conn);
 		}
 	}
+	
+	
+	
 	/**
 	 * 查询方法的抽象
 	 * @param sql
@@ -56,6 +60,27 @@ public class JdbcTemplete {
 			}
 			rs = ps.executeQuery();
 			return handler.doHandler(rs);
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return null;
+		}
+		
+	}
+	public Object query1(String sql,Object...args){
+		Connection conn  = null;
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		
+		try {
+			conn = ConnectionManager.getConnection();
+			ps = conn.prepareStatement(sql);
+			if(args!=null){
+				for (int i = 0; i < args.length; i++) {
+					ps.setObject(i+1, args[i]);
+				}
+			}
+			rs = ps.executeQuery();
+			return rs;
 		} catch (SQLException e) {
 			e.printStackTrace();
 			return null;

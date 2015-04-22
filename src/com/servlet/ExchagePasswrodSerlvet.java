@@ -63,12 +63,16 @@ public class ExchagePasswrodSerlvet extends HttpServlet {
 		String user_name =  (String) session.getAttribute("email");
 		String password = (String)session.getAttribute("password");
 		
-		String password_sumbit = request.getParameter("password");//提交的旧密码
-		String password_ex = request.getParameter("password_correct");//需要修改的密码
-		Login exChagePassword = new Login();
-		
+		String password_sumbit = request.getParameter("password");
+		String password_ex = request.getParameter("password_correct");
+		Login exChagePassword = new Login();		
 		String result = "";
-		if(password_sumbit.equals(password)){
+		if(password_sumbit.equals(password_ex)){
+			
+			request.setAttribute("message","not_different");
+			request.getRequestDispatcher("/page/foreground/regist.jsp").forward(request, response);
+			
+		}else if(password_sumbit!=password_ex&&password_sumbit.equals(password)){
 			result = exChagePassword.exChagePassword(user_name, password_ex);
 			if(result.equals("success")){
 				session.removeAttribute("email");
