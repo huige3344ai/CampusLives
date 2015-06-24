@@ -10,7 +10,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 <html>
   <head>
     <base href="<%=basePath%>"/>
-    123
+    
     <title>校园服务网站</title>
 
   <link rel="stylesheet" href="css/main.css" type="text/css"></link>
